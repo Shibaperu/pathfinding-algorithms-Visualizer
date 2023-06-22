@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/pathfinding-algorithms-Visualizer/vite.svg" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000000" />
+    <title>PathFinding Visualizer</title>
+    <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous"
+  />
+    <script type="module" crossorigin src="/pathfinding-algorithms-Visualizer/assets/index-d4cb0ecc.js"></script>
+    <link rel="stylesheet" href="/pathfinding-algorithms-Visualizer/assets/index-34fae5ee.css">
+  </head>
+  <body>
+    <nav class="navbar">
+      <a class="appTitle" href="/">PathFinding Visualizer</a>
+
+      <a class="visiturl" href="https://github.com/Shibaperu/Shibaperu"><button class="right-btns">Visit Code</button></a>
+      <button class="tutorbtn" onclick="showTutorInfo()">Tutorial</button>
+      <div class = "tutorinfo" id="tutorial" >
+        <h2>Welcome to Pathfinding Visualizer</h2>
+        <p>Hey! Shiba (Creator) here. This is short Tutorial/Info-thingy on how this works. Don't worry I've got you. btw if you go fullscreen (by pressing f11) I'll be happy.</p>
+        <p>What is a pathfinding algorithm?
+          At its core, a pathfinding algorithm seeks to find the shortest path between two points that is from the <span style = "color:rgb(0, 155, 0)">Starting Node (Green)</span> to the <span style="color:red">Destination Node (Red).</span> Both of them can be dragged across anywhere in the grid. This application visualizes various pathfinding algorithms in action, and more!
+        <p>All of the algorithms on this application are adapted for a 2D grid of 25x25 nodes, where 90 degree turns have a "cost" of 1 and movements from a node to another have a "cost" of 1. Alright Now you can see some button at the bottom with <ul><li>Dijkstra's Algorithm: the father of pathfinding algorithms; guarantees the shortest path</li>
+          <li>A* Search: arguably the best pathfinding algorithm; uses heuristics to guarantee the shortest path much faster than Dijkstra's Algorithm. </li><li>Breath-first Search: a great algorithm; guarantees the shortest path.</li><li> Depth-first Search: a very bad algorithm for pathfinding; does not guarantee the shortest path</li></ul></p>
+        <p>You can also make walls on the grid by just clicking and dragging your cursor, to give those algorithms some challenge as these Walls are impenetrable, meaning that a path cannot cross through them meaning that the algorithms would explore more paths, hence more exciting visualisation process.</p>
+      </div>
+      
+      <script>
+      function showTutorInfo() {
+        var infoBox = document.getElementById("tutorial");
+        if (infoBox.style.display === "none") {
+          infoBox.style.display = "block";
+        } else {
+          infoBox.style.display = "none";
+        }
+      }
+      </script>
+      
+
+
+    </nav>
+    
+    
+    <div id="root"></div>
+    
+    
+    
+    
+  </body>
+</html>
